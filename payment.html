@@ -1,1 +1,26 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Secure Payment | Save Restricted Bot</title>
+<script src="https://sdk.cashfree.com/js/v3/cashfree.js"></script>
+<style>
+*{box-sizing:border-box}body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;font-family:Arial,sans-serif;background:#0b1020;color:#eef2ff}
+.box{width:min(92%,430px);padding:34px 24px;text-align:center;background:#121a2e;border:1px solid #263452;border-radius:18px;box-shadow:0 15px 50px rgba(0,0,0,.35)}
+.logo{font-size:42px}.title{font-size:26px;font-weight:800;margin:10px 0}.muted{color:#aab5cc}
+button{width:100%;margin-top:24px;padding:15px;border:0;border:0;border-radius:10px;background:#00a86b;color:#fff;font-size:17px;font-weight:700;cursor:pointer}
+button:disabled{opacity:.6;cursor:wait}.error{margin-top:18px;color:#ff8b8b;display:none}
+</style></head>
+<body><div class="box"><div class="logo">🔐</div><div class="title">Secure Payment</div>
+<p class="muted" id="status">Preparing secure Cashfree checkout...</p>
+<button id="pay" onclick="startPayment()" disabled>💳 Continue to Payment</button><div class="error" id="error"></div></div>
+<script>
+const sessionId=new URLSearchParams(location.search).get("session_id");
+const cashfree=Cashfree({mode:"production"});
+const button=document.getElementById("pay"),statusEl=document.getElementById("status"),errorEl=document.getElementById("error");
+function showError(msg){statusEl.textContent="Unable to start payment.";errorEl.textContent=msg;errorEl.style.display="block";button.disabled=true;}
+function startPayment(){if(!sessionId){showError("Payment session is missing.");return;}button.disabled=true;statusEl.textContent="Redirecting to Cashfree...";
+try{const result=cashfree.checkout({paymentSessionId:sessionId,redirectTarget:"_self"});if(result&&typeof result.catch==="function")result.catch(e=>{button.disabled=false;showError("Cashfree checkout could not be opened.");console.error(e);});}
+catch(e){button.disabled=false;showError("Cashfree checkout could not be opened.");console.error(e);}}
+if(!sessionId)showError("Invalid payment session.");else{button.disabled=false;statusEl.textContent="Your secure payment is ready.";startPayment();}
+</script></body></html>
