@@ -2,136 +2,93 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Save Restricted Bot | MR RAJPUT</title>
-<meta name="description" content="Save Restricted Bot by MR RAJPUT. Telegram content fetching and URL downloader service with subscription plans.">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="theme-color" content="#070b17">
+<meta name="description" content="Save Restricted Bot — premium Telegram content fetching and URL downloader service by MR RAJPUT.">
+<title>Save Restricted Bot — Premium Telegram Downloader</title>
 <style>
-*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#0b1020;color:#eef2ff;line-height:1.6}
-a{color:inherit;text-decoration:none}.wrap{max-width:1050px;margin:auto;padding:0 20px}
-.hero{padding:70px 20px 55px;text-align:center;background:linear-gradient(135deg,#111a35,#172554)}
-.badge{display:inline-block;padding:7px 13px;border:1px solid #42517d;border-radius:999px;font-size:13px;color:#cbd5e1}
-h1{font-size:clamp(38px,7vw,68px);margin:18px 0 8px}.hero p{max-width:720px;margin:0 auto;color:#cbd5e1;font-size:18px}
-.btn{display:inline-block;margin-top:25px;padding:13px 22px;border-radius:10px;background:#229ed9;font-weight:700}
-section{padding:55px 0}h2{font-size:30px;margin-top:0}.muted{color:#aab5cc}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
-.card{background:#121a2e;border:1px solid #263452;border-radius:15px;padding:22px}
-.card h3{margin-top:0}.price{font-size:30px;font-weight:800}.price span{font-size:14px;color:#9eabc3;font-weight:400}
-ul{padding-left:20px}.plans .card{display:flex;flex-direction:column}.plans .btn{margin-top:auto;text-align:center}
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}.stat{text-align:center;padding:18px;background:#10182b;border-radius:12px}.stat strong{display:block;font-size:25px}
-footer{border-top:1px solid #263452;padding:30px 0;color:#9eabc3}
-.notice{padding:16px;border-radius:12px;background:#171f35;border:1px solid #34415e}
-@media(max-width:600px){section{padding:40px 0}.hero{padding-top:50px}}
+:root{--bg:#060914;--panel:rgba(14,20,38,.72);--panel2:#0e162b;--line:rgba(148,163,184,.15);--text:#f7f9ff;--muted:#9aa8c2;--cyan:#22d3ee;--blue:#4f7cff;--purple:#9b5cff;--green:#34d399;--shadow:0 24px 80px rgba(0,0,0,.35)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 15% 10%,rgba(79,124,255,.18),transparent 32%),radial-gradient(circle at 85% 15%,rgba(155,92,255,.15),transparent 30%),var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}a{color:inherit;text-decoration:none}.wrap{width:min(1160px,calc(100% - 32px));margin:auto}
+nav{position:sticky;top:0;z-index:50;background:rgba(6,9,20,.72);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+.navin{height:70px;display:flex;align-items:center;justify-content:space-between}.brand{font-weight:900;letter-spacing:.4px;display:flex;gap:10px;align-items:center}.logo{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg,var(--cyan),var(--blue),var(--purple));box-shadow:0 8px 28px rgba(79,124,255,.35)}.links{display:flex;gap:24px;color:#b9c4d9;font-size:14px}.links a:hover{color:#fff}.navbtn{padding:10px 15px;border-radius:11px;background:#fff;color:#07101f;font-weight:800}
+.hero{padding:96px 0 70px;text-align:center;position:relative;overflow:hidden}.glow{position:absolute;width:520px;height:520px;border-radius:50%;filter:blur(90px);opacity:.18;pointer-events:none}.g1{background:var(--blue);left:-250px;top:0}.g2{background:var(--purple);right:-250px;top:40px}.pill{display:inline-flex;gap:8px;align-items:center;border:1px solid rgba(34,211,238,.25);background:rgba(34,211,238,.07);padding:8px 13px;border-radius:999px;color:#baf6ff;font-size:13px;font-weight:800}.dot{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 14px var(--green)}
+h1{font-size:clamp(44px,8vw,82px);line-height:.98;letter-spacing:-3px;margin:22px auto 18px;max-width:900px}.grad{background:linear-gradient(90deg,#fff 20%,#8eeeff 48%,#a98aff 82%);-webkit-background-clip:text;background-clip:text;color:transparent}.hero p{max-width:720px;margin:auto;color:var(--muted);font-size:18px}.actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:30px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 19px;border-radius:13px;font-weight:850;border:1px solid var(--line);transition:.2s}.btn:hover{transform:translateY(-2px)}.primary{background:linear-gradient(135deg,var(--cyan),var(--blue));color:#06101b;border:0;box-shadow:0 12px 35px rgba(34,211,238,.18)}.secondary{background:rgba(255,255,255,.045)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:55px}.stat{padding:22px;border:1px solid var(--line);background:rgba(255,255,255,.035);border-radius:18px}.stat b{font-size:27px;display:block}.stat span{color:var(--muted);font-size:13px}
+section{padding:72px 0}.eyebrow{text-transform:uppercase;letter-spacing:2px;color:#78e9ff;font-size:11px;font-weight:900}h2{font-size:clamp(30px,5vw,46px);line-height:1.05;margin:8px 0 12px;letter-spacing:-1.5px}.lead{color:var(--muted);max-width:680px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}.card{background:linear-gradient(180deg,rgba(18,27,49,.82),rgba(9,14,28,.82));border:1px solid var(--line);border-radius:22px;padding:25px;box-shadow:var(--shadow)}.card h3{margin:0 0 8px;font-size:20px}.card p,.card li{color:var(--muted);font-size:14px}.card ul{padding-left:19px;margin-bottom:0}.icon{font-size:27px;margin-bottom:12px}
+.plans{background:linear-gradient(180deg,transparent,rgba(79,124,255,.045),transparent)}.plansgrid{display:grid;grid-template-columns:repeat(5,1fr);gap:13px;margin-top:28px}.plan{position:relative;display:flex;flex-direction:column}.plan.featured{border-color:rgba(34,211,238,.5);box-shadow:0 0 0 1px rgba(34,211,238,.1),var(--shadow);transform:translateY(-6px)}.tag{position:absolute;top:14px;right:14px;font-size:10px;background:linear-gradient(90deg,var(--cyan),var(--blue));color:#06101b;padding:5px 8px;border-radius:999px;font-weight:900}.price{font-size:32px;font-weight:950;margin:8px 0}.price small{font-size:12px;color:var(--muted);font-weight:500}.plan .btn{margin-top:auto}.mini{font-size:12px!important}.check{color:#bffaff!important;margin:5px 0}
+.notice{margin-top:25px;padding:22px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.035);color:var(--muted);font-size:14px}
+.faq{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin-top:25px}.faq details{border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.03);padding:17px 19px}.faq summary{cursor:pointer;font-weight:800}.faq p{color:var(--muted);font-size:14px}
+.cta{padding:34px;border-radius:26px;background:linear-gradient(120deg,rgba(34,211,238,.12),rgba(79,124,255,.12),rgba(155,92,255,.12));border:1px solid rgba(120,233,255,.18);display:flex;justify-content:space-between;align-items:center;gap:20px}.cta h2{margin:0}
+footer{border-top:1px solid var(--line);padding:34px 0 45px;color:var(--muted);font-size:13px}.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.social{display:flex;gap:15px}.social a:hover{color:#fff}
+@media(max-width:1000px){.plansgrid{grid-template-columns:repeat(3,1fr)}.grid{grid-template-columns:1fr 1fr}.stats{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:650px){.links{display:none}.hero{padding-top:70px}h1{letter-spacing:-2px}.grid,.faq,.plansgrid{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}.plan.featured{transform:none}.cta{display:block}.cta .btn{margin-top:18px}}
 </style>
 </head>
 <body>
+<nav><div class="wrap navin">
+<a class="brand" href="#"><span class="logo">⚡</span><span>MR RAJPUT</span></a>
+<div class="links"><a href="#features">Features</a><a href="#plans">Plans</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></div>
+<a class="navbtn" href="https://t.me/saverestrictedco_bot">Open Bot</a>
+</div></nav>
+
 <header class="hero">
-<div class="wrap">
-<div class="badge">⚡ Powered by MR RAJPUT</div>
-<h1>SAVE RESTRICTED BOT</h1>
-<p>Telegram content fetching and URL downloader service with subscription plans and smart bot features.</p>
-<a class="btn" href="https://t.me/saverestrictedco_bot">Open Telegram Bot</a>
+<div class="glow g1"></div><div class="glow g2"></div><div class="wrap">
+<div class="pill"><span class="dot"></span> PREMIUM TELEGRAM DOWNLOADER</div>
+<h1>Save. Fetch. <span class="grad">Download.</span></h1>
+<p>Powerful Telegram content fetching and URL downloading with batch tools, large-file support, subscriptions and premium controls.</p>
+<div class="actions"><a class="btn primary" href="https://t.me/saverestrictedco_bot">🚀 Launch Telegram Bot</a><a class="btn secondary" href="#plans">View Plans ↓</a></div>
+<div class="stats">
+<div class="stat"><b>2000+</b><span>Users</span></div><div class="stat"><b>50+</b><span>Daily concurrent users</span></div><div class="stat"><b>4GB+</b><span>Large-file support</span></div><div class="stat"><b>24/7</b><span>Service availability</span></div>
 </div>
-</header>
+</div></header>
 
 <main>
-<section>
-<div class="wrap">
-<div class="stats">
-<div class="stat"><strong>2000+</strong>Monthly Users</div>
-<div class="stat"><strong>5</strong>Subscription Tiers</div>
-<div class="stat"><strong>10+</strong>URL Platforms</div>
-<div class="stat"><strong>4GB+</strong>File Support</div>
-</div>
-</div>
-</section>
-
-<section>
-<div class="wrap">
-<h2>Features</h2>
+<section id="features"><div class="wrap">
+<div class="eyebrow">Built for power users</div><h2>Everything you need in one bot.</h2><p class="lead">A clean, fast workflow for restricted Telegram content and supported URL sources.</p>
 <div class="grid">
-<div class="card"><h3>📥 Content Fetching</h3><ul>
-<li>Restricted/private Telegram content fetching</li>
-<li>4GB+ file support with splitting</li>
-<li>Single link, batch and range modes</li>
-<li>Video, PDF, photo, audio and text filters</li>
-<li>Public and private channel support</li>
-<li>Topic/thread link support</li>
-</ul></div>
-<div class="card"><h3>🌐 URL Downloader</h3><ul>
-<li>YouTube</li><li>Instagram</li><li>Facebook</li><li>Twitter/X</li>
-<li>Pinterest</li><li>Terabox</li><li>MediaFire</li><li>Google Drive</li>
-<li>M3U8/HLS</li><li>Direct URLs</li>
-</ul></div>
-<div class="card"><h3>🎯 Smart Features</h3><ul>
-<li>Redeem codes</li><li>Gift system</li><li>Subscription transfer</li>
-<li>Usage statistics</li><li>Plan-based watermarks</li><li>Custom thumbnails</li>
-<li>Word replacement</li><li>Custom output chat</li>
-</ul></div>
+<div class="card"><div class="icon">📥</div><h3>Restricted Content</h3><p>Fetch authorized public/private Telegram content with single-link, batch and range workflows.</p><ul><li>Video, PDF, photo, audio & text</li><li>Large-file handling & splitting</li><li>Topic/thread link support</li></ul></div>
+<div class="card"><div class="icon">🌐</div><h3>URL Downloader</h3><p>Download supported media from popular URL platforms through a single Telegram interface.</p><ul><li>YouTube · Instagram · Facebook</li><li>X/Twitter · Pinterest · Terabox</li><li>MediaFire · Google Drive · M3U8</li></ul></div>
+<div class="card"><div class="icon">🎯</div><h3>Premium Controls</h3><p>Subscription-aware features designed for different usage levels.</p><ul><li>Usage statistics & plan limits</li><li>Custom thumbnails & watermarks</li><li>Redeem, gift & transfer systems</li></ul></div>
 </div>
-</div>
-</section>
+</div></section>
 
-<section class="plans">
-<div class="wrap">
-<h2>Subscription Plans</h2>
-<p class="muted">Current plans listed for the bot.</p>
+<section id="plans" class="plans"><div class="wrap">
+<div class="eyebrow">Simple subscription</div><h2>Choose your access level.</h2><p class="lead">Plans shown below reflect the current website pricing.</p>
+<div class="plansgrid">
+<div class="card plan"><h3>🆓 Free</h3><div class="price">₹0 <small>forever</small></div><p class="check">✓ 2 uses/day</p><a class="btn secondary" href="https://t.me/saverestrictedco_bot">Start Free</a></div>
+<div class="card plan"><h3>⚡ Basic</h3><div class="price">₹100 <small>/ 30 days</small></div><p class="check">✓ 10 uses/day</p><p class="mini">7 days ₹30 · 1 year ₹840</p><a class="btn secondary" href="https://t.me/saverestrictedco_bot">Choose Basic</a></div>
+<div class="card plan"><h3>🥈 Standard</h3><div class="price">₹180 <small>/ 30 days</small></div><p class="check">✓ 50 uses/day</p><p class="mini">7 days ₹50 · 1 year ₹1,500</p><a class="btn secondary" href="https://t.me/saverestrictedco_bot">Choose Standard</a></div>
+<div class="card plan featured"><span class="tag">POPULAR</span><h3>🥇 Premium</h3><div class="price">₹280 <small>/ 30 days</small></div><p class="check">✓ 100 uses/day</p><p class="mini">7 days ₹80 · 1 year ₹2,350</p><a class="btn primary" href="https://t.me/saverestrictedco_bot">Get Premium</a></div>
+<div class="card plan"><h3>💎 Ultimate</h3><div class="price">₹450 <small>/ 30 days</small></div><p class="check">✓ Unlimited daily usage</p><p class="mini">7 days ₹130 · 1 year ₹3,800</p><a class="btn secondary" href="https://t.me/saverestrictedco_bot">Go Ultimate</a></div>
+</div>
+</div></section>
+
+<section><div class="wrap">
+<div class="eyebrow">Plan features</div><h2>Watermark controls.</h2>
 <div class="grid">
-<div class="card"><h3>🆓 Free</h3><div class="price">₹0 <span>/ month</span></div><p>Daily limit: 2</p><a class="btn" href="https://t.me/saverestrictedco_bot">Start Free</a></div>
-<div class="card"><h3>⚡ Basic</h3><div class="price">₹100 <span>/ month</span></div><p>Daily limit: 10</p><p>Weekly: ₹30 · Yearly: ₹840</p><a class="btn" href="https://t.me/saverestrictedco_bot">Choose Basic</a></div>
-<div class="card"><h3>🥈 Standard</h3><div class="price">₹180 <span>/ month</span></div><p>Daily limit: 50</p><p>Weekly: ₹50 · Yearly: ₹1,500</p><a class="btn" href="https://t.me/saverestrictedco_bot">Choose Standard</a></div>
-<div class="card"><h3>🥇 Premium</h3><div class="price">₹280 <span>/ month</span></div><p>Daily limit: 100</p><p>Weekly: ₹80 · Yearly: ₹2,350</p><a class="btn" href="https://t.me/saverestrictedco_bot">Choose Premium</a></div>
-<div class="card"><h3>💎 Ultimate</h3><div class="price">₹450 <span>/ month</span></div><p>Unlimited daily usage</p><p>Weekly: ₹130 · Yearly: ₹3,800</p><a class="btn" href="https://t.me/saverestrictedco_bot">Choose Ultimate</a></div>
+<div class="card"><h3>Free / Basic</h3><p>PDF watermark is forced on. Video watermark controls are available according to the bot plan.</p></div>
+<div class="card"><h3>Standard</h3><p>PDF watermark remains enabled, with video watermark controls available.</p></div>
+<div class="card"><h3>Premium / Ultimate</h3><p>Higher plans provide greater watermark control, including custom PDF watermark options on Ultimate.</p></div>
 </div>
-</div>
-</section>
+</div></section>
 
-<section>
-<div class="wrap">
-<h2>Watermark System</h2>
-<div class="grid">
-<div class="card"><h3>Free / Basic</h3><p>PDF watermark: forced on. Video watermark: toggle available.</p></div>
-<div class="card"><h3>Standard</h3><p>PDF watermark: forced on. Video watermark: toggle available.</p></div>
-<div class="card"><h3>Premium</h3><p>PDF watermark can be turned off. Video watermark: toggle available.</p></div>
-<div class="card"><h3>Ultimate</h3><p>Full watermark control, including custom PDF watermark text.</p></div>
+<section id="faq"><div class="wrap">
+<div class="eyebrow">Need to know</div><h2>Frequently asked questions.</h2>
+<div class="faq">
+<details open><summary>How do I start?</summary><p>Open the Telegram bot, use /start and follow the bot instructions.</p></details>
+<details><summary>Does the bot support large files?</summary><p>The service is designed for large-file workflows, including video, PDF, audio and other supported Telegram media.</p></details>
+<details><summary>Can I use batch mode?</summary><p>Batch/range features depend on your active subscription plan and the bot's current limits.</p></details>
+<details><summary>Where can I get support?</summary><p>Contact the support account listed below with your Telegram user ID and relevant order/payment details when applicable.</p></details>
 </div>
-</div>
-</section>
+</div></section>
 
-<section>
-<div class="wrap">
-<div class="notice">
-<strong>Support</strong><br>
-Support: <a href="https://t.me/exams_materiel">@exams_materiel</a><br>
-Updates: <a href="https://t.me/premium_srcbot">@premium_srcbot</a><br>
-Admin: <a href="https://t.me/rajput681830">@rajput681830</a>
-</div>
-</div>
-</section>
-
-<section id="products"><div class="wrap">
-<h2>Products / Services</h2><p class="muted">Paid subscription access to Save Restricted Bot. All prices are in INR.</p>
-<div class="grid">
-<div class="card"><h3>⚡ Basic</h3><div class="price">₹30 <span>/ 7 days</span></div><p>₹100 / 30 days · ₹840 / 1 year</p><p>Daily limit: 10</p></div>
-<div class="card"><h3>🥈 Standard</h3><div class="price">₹50 <span>/ 7 days</span></div><p>₹180 / 30 days · ₹1,500 / 1 year</p><p>Daily limit: 50</p></div>
-<div class="card"><h3>🥇 Premium</h3><div class="price">₹80 <span>/ 7 days</span></div><p>₹280 / 30 days · ₹2,350 / 1 year</p><p>Daily limit: 100</p></div>
-<div class="card"><h3>💎 Ultimate</h3><div class="price">₹130 <span>/ 7 days</span></div><p>₹450 / 30 days · ₹3,800 / 1 year</p><p>Unlimited daily usage</p></div>
-</div></div></section>
-<section id="terms"><div class="wrap"><h2>Terms & Conditions</h2><div class="notice">
-<p>By purchasing a subscription, you agree to use the service only for lawful purposes and content you are authorized to access or download.</p>
-<p>Subscription access is associated with the Telegram account used for purchase. Plan duration, price and usage limits are shown on this website and inside the bot.</p>
-<p>Users must not use the service to violate applicable law, third-party rights, or Telegram rules.</p>
-</div></div></section>
-<section id="refund"><div class="wrap"><h2>Refunds & Cancellations</h2><div class="notice">
-<p>Refund and cancellation requests are handled according to the merchant's applicable refund policy and the circumstances of the transaction.</p>
-<p>For assistance, contact support with your Telegram user ID and payment/order reference.</p>
-</div></div></section>
-<section id="contact"><div class="wrap"><h2>Contact Us</h2><div class="notice">
-<p>Support: <a href="https://t.me/exams_materiel">@exams_materiel</a></p>
-<p>Admin: <a href="https://t.me/rajput681830">@rajput681830</a></p>
-<p>Telegram Bot: <a href="https://t.me/saverestrictedco_bot">Open Save Restricted Bot</a></p>
-</div></div></section>
+<section id="contact"><div class="wrap">
+<div class="cta"><div><div class="eyebrow">Ready when you are</div><h2>Open Save Restricted Bot.</h2></div><a class="btn primary" href="https://t.me/saverestrictedco_bot">Open @saverestrictedco_bot →</a></div>
+<div class="notice"><b>Support</b><br>Support: <a href="https://t.me/exams_materiel">@exams_materiel</a> · Updates: <a href="https://t.me/premium_srcbot">@premium_srcbot</a> · Admin: <a href="https://t.me/rajput681830">@rajput681830</a><br><br><b>Terms:</b> Use the service only for lawful purposes and content you are authorized to access. Subscription access, duration and usage limits are governed by the plan shown in the bot/website. Refund requests are handled according to the applicable merchant policy.</div>
+</div></section>
 </main>
 
-<footer><div class="wrap">© MR RAJPUT · Save Restricted Bot · <a href="https://t.me/saverestrictedco_bot">Telegram Bot</a></div></footer>
+<footer><div class="wrap foot"><div>© MR RAJPUT · Save Restricted Bot</div><div class="social"><a href="#features">Features</a><a href="#plans">Plans</a><a href="https://t.me/saverestrictedco_bot">Telegram</a><a href="https://t.me/rajput681830">Admin</a></div></div></footer>
 </body>
 </html>
